@@ -31,6 +31,8 @@ def products(id):
 def aboutUs():
     return "<p> About Us </p>"
 
-@app.route("/users/<username>/")
-def userDetail(username):
-    return f"<p> User {escape(username)}</p>"
+@app.route("/users/")
+def userDetail():
+    firstName=request.args.get('fname')
+    lastName=request.args.get('lname')
+    return f"<p> User : {firstName} {lastName}</p>"
