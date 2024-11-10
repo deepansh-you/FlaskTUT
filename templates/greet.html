@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Greet</title>
+</head>
+<body>
+    <h1>This is our homepage!</h1>
+    <img src="{{url_for('static', filename='img/bb.jpg')}}" alt="" width="500px" height="300px">
+    {%if name%}
+        <h3>Hello {{name}}</h3>
+    {%else%}
+        <h3>Hello World!</h3>
+    {%endif%}
+</body>
+</html>
